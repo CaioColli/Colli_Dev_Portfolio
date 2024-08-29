@@ -1,3 +1,4 @@
 styled-component
 gsap
 chakra
+react-scroll-parallax - https://www.npmjs.com/package/react-scroll-parallax

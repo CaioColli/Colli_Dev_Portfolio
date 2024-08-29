@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import profilePicture from '/public/Images/ProfilePicture.png'
-import { TbSmartHome } from 'react-icons/tb'
 import { CgProfile } from 'react-icons/cg'
-import { GiAmericanShield } from 'react-icons/gi'
+import { MdOutlineEmail } from 'react-icons/md'
 import { FaDiagramProject } from 'react-icons/fa6'
 import { BiLogoLinkedin } from 'react-icons/bi'
 import { IoLogoGithub } from 'react-icons/io5'
@@ -10,6 +9,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { Tooltip } from '@chakra-ui/react'
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
+import { scrollToSection } from '@/Utils/scrollTo'
 
 const Container = styled.header.withConfig({
     shouldForwardProp: (prop) => !['large'].includes(prop)
@@ -17,11 +17,17 @@ const Container = styled.header.withConfig({
     background-color: var(--DarkGrayBg);
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     justify-content: space-between;
     padding: 25px;
-    width: ${props => props.large ? '200px' : '75px'};
+    width: ${props => props.large ? '220px' : '75px'};
     transition: 0.5s ease;
+    z-index: 100;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 `
 
 const Content = styled.main`
@@ -108,15 +114,11 @@ const iconStyle = `
     color: var(--WhiteColor);
 `
 
-const IconHome = styled(TbSmartHome)`
+const IconSkills = styled(CgProfile)`
     ${iconStyle}
 `
 
-const IconProfile = styled(CgProfile)`
-    ${iconStyle}
-`
-
-const IconSkills = styled(GiAmericanShield)`
+const IconContact = styled(MdOutlineEmail)`
     ${iconStyle}
 `
 
@@ -199,38 +201,29 @@ export const Header = () => {
                 </Tooltip>
 
                 <NavList>
-                    <Tooltip label='Home' placement='top' hasArrow color='white ' fontSize='small'>
-                        <NavItem>
-                            <IconHome />
-                            <DescriptionIcon ref={el => descriptionRef.current[0] = el}>
-                                Home
-                            </DescriptionIcon>
-                        </NavItem>
-                    </Tooltip>
-
-                    <Tooltip label='Sobre' placement='top' hasArrow color='white ' fontSize='small'>
-                        <NavItem>
-                            <IconProfile />
-                            <DescriptionIcon ref={el => descriptionRef.current[1] = el}>
-                                Sobre
-                            </DescriptionIcon>
-                        </NavItem>
-                    </Tooltip>
-
-                    <Tooltip label='Skills' placement='top' hasArrow color='white ' fontSize='small'>
-                        <NavItem>
-                            <IconSkills />
-                            <DescriptionIcon ref={el => descriptionRef.current[2] = el}>
-                                Skills
-                            </DescriptionIcon>
-                        </NavItem>
-                    </Tooltip>
-
                     <Tooltip label='Projetos' placement='top' hasArrow color='white ' fontSize='small'>
-                        <NavItem>
+                        <NavItem onClick={() => scrollToSection('SectionProjects')}>
                             <IconProjects />
-                            <DescriptionIcon ref={el => descriptionRef.current[3] = el}>
+                            <DescriptionIcon ref={el => descriptionRef.current[0] = el}>
                                 Projetos
+                            </DescriptionIcon>
+                        </NavItem>
+                    </Tooltip>
+
+                    <Tooltip label='Sobre mim' placement='top' hasArrow color='white ' fontSize='small'>
+                        <NavItem onClick={() => scrollToSection('SectionSkills')}>
+                            <IconSkills />
+                            <DescriptionIcon ref={el => descriptionRef.current[1] = el}>
+                                Sobre mim
+                            </DescriptionIcon>
+                        </NavItem>
+                    </Tooltip>
+
+                    <Tooltip label='Contato' placement='top' hasArrow color='white ' fontSize='small'>
+                        <NavItem onClick={() => scrollToSection('SectionContact')}>
+                            <IconContact />
+                            <DescriptionIcon ref={el => descriptionRef.current[2] = el}>
+                                Contato
                             </DescriptionIcon>
                         </NavItem>
                     </Tooltip>
