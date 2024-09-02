@@ -137,6 +137,10 @@ const NavFooterList = styled.ul`
     gap: 24px;
 `
 
+const Anchor = styled.a`
+    all: unset;
+`
+
 const IconLinkedin = styled(BiLogoLinkedin)`
     ${iconStyle}    
 `
@@ -234,19 +238,25 @@ export const Header = () => {
                 <NavFooterList>
                     <Tooltip label='LinkedIn' placement='top' hasArrow color='white ' fontSize='small'>
                         <NavItem>
-                            <IconLinkedin />
+                            <Anchor href='https://www.linkedin.com/in/caiocolli/' target='_blank'>
+                                <IconLinkedin />
+                            </Anchor>
                         </NavItem>
                     </Tooltip>
 
                     <Tooltip label='GitHub' placement='top' hasArrow color='white ' fontSize='small'>
                         <NavItem>
-                            <IconGitHub />
+                            <Anchor href='https://github.com/CaioColli' target='_blank'>
+                                <IconGitHub />
+                            </Anchor>
                         </NavItem>
                     </Tooltip>
 
                     <Tooltip label='WhatsApp' placement='top' hasArrow color='white ' fontSize='small'>
                         <NavItem>
-                            <IconWhatsApp />
+                            <Anchor href='https://wa.me/+5519992702740' target='_blank'>
+                                <IconWhatsApp />
+                            </Anchor>
                         </NavItem>
                     </Tooltip>
                 </NavFooterList>

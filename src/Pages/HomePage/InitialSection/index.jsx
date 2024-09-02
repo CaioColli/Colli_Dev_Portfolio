@@ -105,6 +105,15 @@ const Button = styled.button`
     color: var(--DarkBlueBg);
     cursor: pointer;
     border-radius: 30px;
+    transition: 0.5s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(1);
+    }
 `
 
 const Anchor = styled.a`

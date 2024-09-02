@@ -10,6 +10,8 @@ const Container = styled.section`
     background-color: var(--BrownBg);
     display: flex;
     height: 100%;
+    flex-direction: column;
+    gap: 48px;
     justify-content: center;
     min-height: 100vh;
     position: relative;
@@ -129,6 +131,22 @@ const Anchor = styled.a`
     }
 `
 
+const Button = styled.button`
+    all: unset;
+    color: var(--WhiteColor);
+    cursor: pointer;
+    font-size: 24px;
+    transition: 0.5s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(1);
+    }
+`
+
 export const ProjectsSection = forwardRef((props, ref) => {
     const cloudsData = [
         { CloudWidth: '80px', CloudHeight: '80px', CloudOpacity: '.1', CloudTop: '-20%', CloudLeft: '5%' },
@@ -211,6 +229,11 @@ export const ProjectsSection = forwardRef((props, ref) => {
                     </Card>
                 ))}
             </Content>
+            {data && data.length >= 6 && (
+                <Button>
+                    MAIS PROJETOS
+                </Button>
+            )}
         </Container>
     )
 })
