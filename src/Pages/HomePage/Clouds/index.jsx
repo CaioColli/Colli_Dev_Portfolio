@@ -15,6 +15,7 @@ const Content = styled.div.withConfig({
     opacity: ${props => props.CloudOpacity};
     top: ${props => props.CloudTop};
     left: ${props => props.CloudLeft};
+    z-index: 50;
 
     @media (max-width: 767px) {
         display: none;
