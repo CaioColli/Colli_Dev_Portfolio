@@ -37,7 +37,7 @@ export const HomePage = () => {
                     <SkillsSection ref={el => (containerRefs.current[2] = el)} />
                 </Parallax>
 
-                <Parallax speed={-5}>
+                <Parallax speed={0}>
                     <ContactSection ref={el => (containerRefs.current[3] = el)} />
                 </Parallax>
             </Container>
