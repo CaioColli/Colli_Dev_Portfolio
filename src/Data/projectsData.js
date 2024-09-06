@@ -27,5 +27,14 @@ export const projectsData = [{
         links: ['https://github.com/CaioColli/Portfolio', 'https://caiocolli.github.io/Portfolio/'],
         linkTitle: ['Olhar Código', 'Olhar Projeto'],
         finished: true
+    }, {
+        id: 4,
+        image: '/Images/BoxBank.png',
+        title: 'BoxBank',
+        description: 'BoxBank é uma landing page de um banco fictício que desenvolvi enquanto aprimorava minhas habilidades em JavaScript. Este projeto permite que os usuários interajam com uma simulação de smartphone, proporcionando uma experiência realista de como investir na plataforma fictícia BoxBank. Além disso, a landing page é totalmente responsiva, garantindo uma experiência fluida em qualquer dispositivo.',
+        technology: ['HTML', 'CSS', 'JavaScript'],
+        links: ['https://github.com/CaioColli/BoxBank', 'https://caiocolli.github.io/BoxBank/'],
+        linkTitle: ['Olhar Código', 'Olhar Projeto'],
+        finished: true
     }
 ]
