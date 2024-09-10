@@ -36,5 +36,14 @@ export const projectsData = [{
         links: ['https://github.com/CaioColli/BoxBank', 'https://caiocolli.github.io/BoxBank/'],
         linkTitle: ['Olhar Código', 'Olhar Projeto'],
         finished: true
+    }, {
+        id: 5,
+        image: '/Images/KikiDelivery.png',
+        title: 'KikiDelivery',
+        description: 'KikiDelivery é uma landing page inspirada em uma das minhas animações favoritas do Studio Ghibli. A página simula uma transportadora, exibindo os serviços oferecidos e incluindo uma funcionalidade de simulação de entrega baseada na API do Google Maps. Desenvolvido com Node.js e React, o KikiDelivery calcula com precisão a distância, o tempo e o custo das entregas, proporcionando uma experiência envolvente e detalhada para o usuário.',
+        technology: ['React', 'JavaScript', 'Node.js', 'Styled Component', 'GSAP'],
+        links: ['https://github.com/CaioColli/KikiDelivey', 'https://kiki-delivey.vercel.app/'],
+        linkTitle: ['Olhar Código', 'Olhar Projeto'],
+        finished: false
     }
 ]

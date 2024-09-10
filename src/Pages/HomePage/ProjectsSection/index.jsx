@@ -30,6 +30,7 @@ const Content = styled.div`
     gap: 24px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 `
 
 const Card = styled.article`
@@ -39,7 +40,6 @@ const Card = styled.article`
     min-width: 450px;
     max-width: 450px;
     padding: 10px;
-    width: fit-content;
 
     @media (max-width: 700px) {
         min-width: auto;
@@ -129,6 +129,16 @@ const Anchor = styled.a`
     @media (max-width: 320px) {
         font-size: 20px;
     }
+`
+
+const Developing = styled.button`
+    all: unset;
+    background-color: var(--RedBg);
+    border-radius: 10px;
+    color: var(--WhiteColor);
+    cursor: default;
+    font-size: 24px;
+    padding: 5px 10px;
 `
 
 const Button = styled.button`
@@ -225,6 +235,13 @@ export const ProjectsSection = forwardRef((props, ref) => {
                                     </Anchor>
                                 ))}
                             </Links>
+
+                            {item.finished === false && (
+                                <Developing>
+                                    EM DESENVOLTIMENTO
+                                </Developing>
+                            )}
+
                         </Footer>
                     </Card>
                 ))}
