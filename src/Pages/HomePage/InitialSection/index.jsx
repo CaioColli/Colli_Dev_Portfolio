@@ -197,7 +197,7 @@ export const InitialSection = forwardRef((props, ref) => {
                             React
                         </Paragraph>
 
-                        <Anchor href='public/Documents/Currículo.pdf' download>
+                        <Anchor href='/Documents/Currículo.pdf' download>
                             <Button>
                                 Currículo
                             </Button>
