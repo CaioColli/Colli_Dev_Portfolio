@@ -16,7 +16,7 @@ export const projectsData = [{
         technology: ['React', 'JavaScript', 'GSAP', 'Styled Component', 'SQL'],
         links: ['https://github.com/CaioColli/Bmw', 'https://bmw-pink-eta.vercel.app/'],
         linkTitle: ['Olhar Código', 'Olhar Projeto'],
-        finished: false
+        finished: true
     },
     {
         id: 3,
