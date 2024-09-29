@@ -1,36 +1,53 @@
 import styled from 'styled-components'
 
 const Container = styled.article`
-    display: flex;
-    flex-direction: column;
-    max-width: 450px;
-    min-width: 450px;
+    min-width: 960px;
+    max-width: 960px;
 
-    @media (max-width: 700px) {
-        min-width: auto;
-        max-width: 360px;
-    }
-
-    @media (max-width: 320px) {
-        min-width: auto;
-        max-width: 300px;
+    @media (max-width: 1024px) {
+        min-width: 0;
     }
 `
 
 const Content = styled.div`
     background-color: var(--WhiteBg);
-    border-radius: 30px 30px 0 0;
-    padding: 10px;
-    min-height: 500px;
+    border-radius: 30px;
+    padding: 16px;
 `
 
-const Figure = styled.figure`
+const Figure = styled.figure.withConfig({
+    shouldForwardProp: (prop) => !['bgImage'].includes(prop)
+})`
+    position: relative;
     background-color: var(--DarkBlueBg);
     border-radius: 20px;
     display: flex;
     justify-content: center;
     padding: 24px;
-`
+
+    // Definir o conteúdo com z-index maior que o ::before
+    & > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    // Aplica a imagem de fundo com opacidade no ::before
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(${props => props.bgImage});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        opacity: 0.2;
+        z-index: 1;
+    }
+`;
 
 const Image = styled.img`
     @media (max-width: 320px) {
@@ -56,10 +73,6 @@ const Paragraph = styled.p`
 `
 
 const Footer = styled.footer`
-    align-items: center;
-    background-color: var(--DarkBlueBg);
-    border-radius: 0 0 30px 30px;
-    display: flex;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -71,7 +84,6 @@ const Technologys = styled.ul`
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    justify-content: center;
 `
 
 const TechnologyItem = styled.li`
@@ -116,13 +128,14 @@ const DevelopingMessage = styled.div`
     cursor: default;
     font-size: 24px;
     padding: 5px 10px;
+    text-align: center;
 `
 
-export const Card = ({ image, title, paragraph, technologies, links, isFinished }) => {
+export const Card = ({ bgImage, image, title, paragraph, technologies, links, isFinished }) => {
     return (
         <Container>
             <Content>
-                <Figure>
+                <Figure bgImage={bgImage}>
                     <Image src={image} />
                 </Figure>
 
@@ -130,27 +143,31 @@ export const Card = ({ image, title, paragraph, technologies, links, isFinished 
                     <Title>{title}</Title>
                     <Paragraph>{paragraph}</Paragraph>
                 </Description>
+
+                <Footer>
+                    <Title>
+                        Tecnologias
+                    </Title>
+
+                    <Technologys>
+                        {technologies.map((tech, index) => (
+                            <TechnologyItem key={index}>{tech}</TechnologyItem>
+                        ))}
+                    </Technologys>
+
+                    <Links>
+                        {links.map((link, index) => (
+                            <Anchor href={link.href} target='_blank' key={index}>
+                                {link.title}
+                            </Anchor>
+                        ))}
+                    </Links>
+
+                    {!isFinished && (
+                        <DevelopingMessage>EM DESENVOLVIMENTO</DevelopingMessage>
+                    )}
+                </Footer>
             </Content>
-
-            <Footer>
-                <Technologys>
-                    {technologies.map((tech, index) => (
-                        <TechnologyItem key={index}>{tech}</TechnologyItem>
-                    ))}
-                </Technologys>
-
-                <Links>
-                    {links.map((link, index) => (
-                        <Anchor href={link.href} target='_blank' key={index}>
-                            {link.title}
-                        </Anchor>
-                    ))}
-                </Links>
-
-                {!isFinished && (
-                    <DevelopingMessage>EM DESENVOLVIMENTO</DevelopingMessage>
-                )}
-            </Footer>
         </Container>
     )
 }

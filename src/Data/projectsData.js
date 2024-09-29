@@ -1,5 +1,6 @@
 export const projectsData = [{
         id: 1,
+        bgImage: '/Images/BgFalloutBurguer.png',
         image: '/Images/FalloutBurguer.png',
         title: 'Fallout Burguer',
         description: 'Fallout Burguer é um projeto de pedidos online que permite adicionar e modificar itens no carrinho, preencher informações de compra (endereço e dados pessoais) e finalizar o pedido via WhatsApp, oferecendo uma experiência de compra rápida e prática.',
@@ -10,6 +11,7 @@ export const projectsData = [{
     },
     {
         id: 2,
+        bgImage: '/public/Images/BgShowCaseBmw.png',
         image: '/Images/ShowCaseBmw.png',
         title: 'Showcase BMW',
         description: 'Este projeto é um ShowCase dos modelos atuais da BMW, permitindo aos usuários filtrar por critérios diversos, pesquisar modelos específicos e redefinir filtros. Inclui uma página especial para o lançamento da nova BMW M5, com detalhes, especificações e animações interativas, como animações SVG, proporcionando uma experiência envolvente.',
@@ -19,30 +21,13 @@ export const projectsData = [{
         finished: true
     },
     {
-        id: 3,
-        image: '/Images/Portfolio.png',
-        title: 'Primeiro Portfolio',
-        description: 'Este é o meu primeiro portfólio, onde apresento alguns dos meus projetos anteriores. O portfólio é enriquecido com animações SVG e animações de scroll utilizando GSAP, proporcionando uma navegação interativa e visualmente atraente.',
-        technology: ['HTML', 'CSS', 'JavaScript', 'GSAP'],
-        links: ['https://github.com/CaioColli/Portfolio', 'https://caiocolli.github.io/Portfolio/'],
-        linkTitle: ['Olhar Código', 'Olhar Projeto'],
-        finished: true
-    }, {
-        id: 4,
-        image: '/Images/BoxBank.png',
-        title: 'BoxBank',
-        description: 'BoxBank é uma landing page de um banco fictício que desenvolvi enquanto aprimorava minhas habilidades em JavaScript. Este projeto permite que os usuários interajam com uma simulação de smartphone, proporcionando uma experiência realista de como investir na plataforma fictícia BoxBank. Além disso, a landing page é totalmente responsiva, garantindo uma experiência fluida em qualquer dispositivo.',
-        technology: ['HTML', 'CSS', 'JavaScript'],
-        links: ['https://github.com/CaioColli/BoxBank', 'https://caiocolli.github.io/BoxBank/'],
-        linkTitle: ['Olhar Código', 'Olhar Projeto'],
-        finished: true
-    }, {
-        id: 5,
-        image: '/Images/KikiDelivery.png',
-        title: 'KikiDelivery',
-        description: 'KikiDelivery é uma landing page inspirada em uma das minhas animações favoritas do Studio Ghibli. A página simula uma transportadora, exibindo os serviços oferecidos e incluindo uma funcionalidade de simulação de entrega baseada na API do Google Maps. Desenvolvido com Node.js e React, o KikiDelivery calcula com precisão a distância, o tempo e o custo das entregas, proporcionando uma experiência envolvente e detalhada para o usuário.',
-        technology: ['React', 'JavaScript', 'Node.js', 'Styled Component', 'GSAP'],
-        links: ['https://github.com/CaioColli/KikiDelivey', 'https://kiki-delivey.vercel.app/'],
+        id: 2,
+        bgImage: '/Images/BgOhanaTravel.png',
+        image: '/Images/OhanaTravel.png',
+        title: 'Ohana Travel',
+        description: 'No OhanaTravel, uma agência de viagens focada no Havaí, desenvolvi um CRUD no backend usando Node.js e o banco de dados não relacional Firebase. O projeto inclui autenticação de usuários e oferece uma área administrativa exclusiva para usuários com permissão de administrador. Nessa área, é possível adicionar, editar e excluir serviços, além de gerenciar ofertas, destinos em destaque e opções de turismo. O site também permite a troca de moeda entre real e dólar. Sinta-se à vontade para explorar o site, onde você pode simular todo o processo, desde a escolha dos serviços até a finalização da "compra". Recomendo, no entanto, não inserir dados reais ao testar.',
+        technology: ['React', 'JavaScript', 'Node.js', 'Express', 'Firebase'],
+        links: ['https://github.com/CaioColli/OhanaTravel', 'https://ohana-travel.vercel.app/'],
         linkTitle: ['Olhar Código', 'Olhar Projeto'],
         finished: false
     }

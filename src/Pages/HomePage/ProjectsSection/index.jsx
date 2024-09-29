@@ -30,7 +30,20 @@ const Content = styled.div`
     gap: 24px;
     flex-wrap: wrap;
     justify-content: center;
-    //align-items: center;
+`
+
+const Button = styled.button`
+    all: unset;
+    background-color: var(--OrangeBg);
+    border-radius: 10px;
+    color: var(--WhiteColor);
+    cursor: pointer;
+    font-size: 24px;
+    padding: 16px;
+
+    &:hover {
+        transform: scale(1.02);
+    }
 `
 
 export const ProjectsSection = forwardRef((props, ref) => {
@@ -81,6 +94,7 @@ export const ProjectsSection = forwardRef((props, ref) => {
                 {data && data.map(item => (
                     <Card
                         key={item.id}
+                        bgImage={item.bgImage}
                         image={item.image}
                         title={item.title}
                         paragraph={item.description}
@@ -93,7 +107,7 @@ export const ProjectsSection = forwardRef((props, ref) => {
                 ))}
             </Content>
 
-            {data && data.length >= 6 && (
+            {data && data.length >= 3 && (
                 <Button>
                     MAIS PROJETOS
                 </Button>
