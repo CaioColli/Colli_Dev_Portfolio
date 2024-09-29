@@ -20,7 +20,7 @@ export const otherProjectsData = [{
     finished: true
 }, {
     id: 3,
-    bgImage: '/public/Images/BgPortfolio.png',
+    bgImage: '/Images/BgPortfolio.png',
     image: '/Images/Portfolio.png',
     title: 'Primeiro Portfolio',
     description: 'Este é o meu primeiro portfólio, onde apresento alguns dos meus projetos anteriores. O portfólio é enriquecido com animações SVG e animações de scroll utilizando GSAP, proporcionando uma navegação interativa e visualmente atraente.',

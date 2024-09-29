@@ -189,12 +189,12 @@ export const InitialSection = forwardRef((props, ref) => {
                             </SubSubTitle>
 
                             <Span>
-                                FRONT END
+                                FULL STACK
                             </Span>
                         </DescriptionDev>
 
                         <Paragraph>
-                            React
+                            React.js e Node.js
                         </Paragraph>
 
                         <Anchor href='/Documents/Currículo.pdf' download>
