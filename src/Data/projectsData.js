@@ -21,7 +21,7 @@ export const projectsData = [{
         finished: true
     },
     {
-        id: 2,
+        id: 3,
         bgImage: '/Images/BgOhanaTravel.png',
         image: '/Images/OhanaTravel.png',
         title: 'Ohana Travel',

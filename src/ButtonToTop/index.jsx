@@ -11,6 +11,7 @@ const Container = styled.button`
     padding: 8px;
     position: fixed;
     right: 48px;
+    z-index: 999;
 
     @media (max-width: 1024px) {
         display: none;

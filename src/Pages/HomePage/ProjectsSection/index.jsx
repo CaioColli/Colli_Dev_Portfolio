@@ -5,6 +5,7 @@ import { Satellite } from '../Satellite'
 import { forwardRef } from 'react'
 import { projectsData } from '@/Data/projectsData'
 import { Card } from '@/Components/ProjectCard'
+import { Link } from 'react-router-dom'
 
 const Container = styled.section`
     align-items: center;
@@ -32,6 +33,10 @@ const Content = styled.div`
     justify-content: center;
 `
 
+const StyledLink = styled(Link)`
+    all: unset;
+`
+
 const Button = styled.button`
     all: unset;
     background-color: var(--OrangeBg);
@@ -40,6 +45,7 @@ const Button = styled.button`
     cursor: pointer;
     font-size: 24px;
     padding: 16px;
+    z-index: 100;
 
     &:hover {
         transform: scale(1.02);
@@ -108,9 +114,12 @@ export const ProjectsSection = forwardRef((props, ref) => {
             </Content>
 
             {data && data.length >= 3 && (
-                <Button>
-                    MAIS PROJETOS
-                </Button>
+
+                <StyledLink to='projetos'>
+                    <Button>
+                        MAIS PROJETOS
+                    </Button>
+                </StyledLink>
             )}
         </Container>
     )
