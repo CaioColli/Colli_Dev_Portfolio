@@ -8,6 +8,7 @@ const Container = styled.section`
     background-color: var(--DarkBlueBg);
     display: flex;
     padding: 48px;
+    justify-content: center;
     height: 100%;
 `
 

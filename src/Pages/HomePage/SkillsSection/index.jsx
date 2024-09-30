@@ -58,7 +58,7 @@ const SubTitleContainer = styled.div`
     justify-content: center;
     min-width: 100%;
     max-width: 100%;
-    padding: 16px 0;
+    padding: 16px;
     border-radius: 20px;
 `
 

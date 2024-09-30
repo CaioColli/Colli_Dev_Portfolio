@@ -6,13 +6,15 @@ import { Outlet, useLocation } from 'react-router-dom'
 export const PagePattern = () => {
     const location = useLocation()
 
-    const hiddenInRoute = '/projetos'
+    const hiddenInRoute = ['/projetos']
+
+    const isHidden = hiddenInRoute.includes(location.pathname)
 
     return (
         <PageContainer>
-            {location.pathname !== hiddenInRoute &&
+            {!isHidden && (
                 <FloatingHeader />
-            }
+            )}
             <Outlet />
             <ButtonToTop />
         </PageContainer>
