@@ -11,7 +11,7 @@ export const projectsData = [{
     },
     {
         id: 2,
-        bgImage: '/public/Images/BgShowCaseBmw.png',
+        bgImage: '/Images/BgShowCaseBmw.png',
         image: '/Images/ShowCaseBmw.png',
         title: 'Showcase BMW',
         description: 'Este projeto é um ShowCase dos modelos atuais da BMW, permitindo aos usuários filtrar por critérios diversos, pesquisar modelos específicos e redefinir filtros. Inclui uma página especial para o lançamento da nova BMW M5, com detalhes, especificações e animações interativas, como animações SVG, proporcionando uma experiência envolvente.',
