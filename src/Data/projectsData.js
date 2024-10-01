@@ -26,7 +26,7 @@ export const projectsData = [{
         image: '/Images/OhanaTravel.png',
         title: 'Ohana Travel',
         description: 'No OhanaTravel, uma agência de viagens focada no Havaí, desenvolvi um CRUD no backend usando Node.js e o banco de dados não relacional Firebase. O projeto inclui autenticação de usuários e oferece uma área administrativa exclusiva para usuários com permissão de administrador. Nessa área, é possível adicionar, editar e excluir serviços, além de gerenciar ofertas, destinos em destaque e opções de turismo. O site também permite a troca de moeda entre real e dólar. Sinta-se à vontade para explorar o site, onde você pode simular todo o processo, desde a escolha dos serviços até a finalização da "compra". Recomendo, no entanto, não inserir dados reais ao testar.',
-        technology: ['React', 'JavaScript', 'Node.js', 'Express', 'Firebase'],
+        technology: ['React', 'JavaScript', 'Node.js', 'Express', 'Firebase', 'Firabase Firestone', 'Firebase Storage', 'Firebase Authentication'],
         links: ['https://github.com/CaioColli/OhanaTravel', 'https://ohana-travel.vercel.app/'],
         linkTitle: ['Olhar Código', 'Olhar Projeto'],
         finished: false
