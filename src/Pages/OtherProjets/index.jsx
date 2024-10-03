@@ -5,11 +5,18 @@ import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.section`
+    align-items: center;
     background-color: var(--DarkBlueBg);
     display: flex;
-    padding: 48px;
-    justify-content: center;
+    flex-direction: column;
+    gap: 48px;
     height: 100%;
+    padding: 48px;
+`
+
+const Title = styled.h2`
+    font-size: clamp(2rem, 1.6446rem + 1.3378vw, 3.25rem);
+    color: var(--WhiteColor);
 `
 
 const Content = styled.div`
@@ -31,6 +38,10 @@ export const OtherProjects = () => {
 
     return (
         <Container ref={containerRef}>
+            <Title>
+                Outros projetos
+            </Title>
+
             <Content>
                 {data && data.map(item => (
                     <Card
