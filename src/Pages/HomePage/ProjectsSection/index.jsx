@@ -114,7 +114,6 @@ export const ProjectsSection = forwardRef((props, ref) => {
             </Content>
 
             {data && data.length >= 3 && (
-
                 <StyledLink to='projetos'>
                     <Button>
                         MAIS PROJETOS

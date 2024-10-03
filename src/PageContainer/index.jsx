@@ -1,3 +1,4 @@
+import { useScrollToTop } from '@/hooks/Navigate'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -9,6 +10,8 @@ const Container = styled.div`
 `
 
 export const PageContainer = ({ children }) => {
+    useScrollToTop()
+
     return (
         <Container>
             {children}
