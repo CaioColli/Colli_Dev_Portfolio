@@ -7,6 +7,10 @@ const Container = styled.article`
     @media (max-width: 1024px) {
         min-width: 0;
     }
+
+    @media (max-width: 425px) {
+        max-width: 350px;
+    }
 `
 
 const Content = styled.div`
@@ -50,7 +54,7 @@ const Figure = styled.figure.withConfig({
 `;
 
 const Image = styled.img`
-    @media (max-width: 320px) {
+    @media (max-width: 425px) {
         max-width: 250px;
     }
 `
@@ -92,7 +96,7 @@ const TechnologyItem = styled.li`
     border-radius: 10px;
     color: var(--WhiteColor);
     cursor: default;
-    font-size: 24px;
+    font-size: clamp(1.125rem, 1.0184rem + 0.4013vw, 1.5rem);
     padding: 5px 10px;
 `
 
@@ -109,6 +113,7 @@ const Anchor = styled.a`
     color: var(--WhiteColor);
     cursor: pointer;
     font-size: 24px;
+    font-size: clamp(1.125rem, 1.0184rem + 0.4013vw, 1.5rem);
     padding: 5px 10px;
     transition: 0.5s ease;
 

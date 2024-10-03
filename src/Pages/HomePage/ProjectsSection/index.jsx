@@ -26,15 +26,20 @@ const CloudsContain = styled.div``
 const SatelliteContain = styled.div``
 
 const Content = styled.div`
-    z-index: 100;
     display: flex;
-    gap: 24px;
     flex-wrap: wrap;
+    gap: 24px;
     justify-content: center;
+    z-index: 100;
 `
 
 const StyledLink = styled(Link)`
     all: unset;
+`
+
+const ButtonContent = styled.div`
+    z-index: 100;
+    display: flex;
 `
 
 const Button = styled.button`
@@ -45,7 +50,6 @@ const Button = styled.button`
     cursor: pointer;
     font-size: 24px;
     padding: 16px;
-    z-index: 100;
 
     &:hover {
         transform: scale(1.02);
@@ -114,11 +118,13 @@ export const ProjectsSection = forwardRef((props, ref) => {
             </Content>
 
             {data && data.length >= 3 && (
-                <StyledLink to='projetos'>
-                    <Button>
-                        MAIS PROJETOS
-                    </Button>
-                </StyledLink>
+                <ButtonContent>
+                    <StyledLink to='projetos'>
+                        <Button>
+                            MAIS PROJETOS
+                        </Button>
+                    </StyledLink>
+                </ButtonContent>
             )}
         </Container>
     )
